@@ -1,0 +1,94 @@
+Why Testing ?
+
+* To confirm whatever being asked is being delivered.
+* To deliver a quality product.
+* Identify errors/bugs
+* Identify missing requirements.
+* Ensure that software is behaving as expected.
+* Ensure that software is performing as expected.
+* Ensure that software is behaving same in development and the production environment.
+-----------------------------------------------------------------------------------------------
+Black Box Testing
+White Box Testing
+---------------------------------------------------------------------------------------------
+Unit Testing -------> Integration Testing ------------------> system testing ----------> acceptance
+testing
+-----------------------------------------------------------------------------
+Unit testing frameworks
+Junit
+TestNG
+JTest
+Spry Test
+--------------------------------------------------------------------------------------------------
+Junit 4
+
+Assertion is a tool ( a predicate) used to verify a programming assumption ( expectation ) with
+an actual outcome of a program implementation. For example a programmer can expect that the addition
+of two positive numbers will result in a positive number. So he or she can write a program to add
+two numbers and assert that the expected result with the actual result.
+
+
+The org.junit.Assert package provides static overloaded methods assert expected and actual values for all primitive types, objects and arrays.
+
+To create test cases , right click on the src/test/java=====> Junit testcase
+We get a dialog box
+    * Where we write the package name for the testcase
+    * Testcase class name 
+    * Select the class under test.   
+
+In the next dialog box, we select the methods for which we want to write the testcase.
+  
+
+package com.cts.demo.model.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CalculatorTest {
+
+	@Test
+	public void testAdd() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSubtract() {
+		fail("Not yet implemented");
+	}
+
+}
+--------------------------------------------------------------------------------------
+
+How to execute the testcase?
+
+
+Right click on the code editor =======> Run as ======> Junit Test
+
+The test case failed.
+
+-----------------------------------------------------------------------------------------
+ assertEquals(String message, expected , actual)
+ assertEquals(expected, actual)
+
+   equals method to compare
+------------------------------------------------------------------------------------------------------
+What is static import?   
+static import is done for using static methods without the class name in the code.
+
+--------------------------------------------------------------------------------------------------------
+assertTrue(conditon)
+assertTrue(failure message, condition)
+If the condition becomes false , the assertion fails and AssertionError is thrown. 
+
+asserFalse(condition)
+assertFalse(failure message, condition)
+
+assertNull
+assertNotNull
+--------------------------------------------------------------------------------------------------------------
+assertSame(object expected, object actual): This supports only objects and checks the object reference using the == operator. If two different objects are passed, then AssertionError is thrown.
+
+assertNotSame
+
+ 
